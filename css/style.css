@@ -1,0 +1,75 @@
+body
+{
+    background: #cfd8dc;
+}
+
+.card-container
+{
+    font-family: 'Open Sans', sans serif;
+    font-size: 120px;
+    font-weight: bold;
+    width: 400px;
+    height: 250px;
+
+    border-radius: 10px;
+    perspective: 1400px;
+    position:absolute;
+    left:0; right:0;
+    top:0; bottom:0;
+    margin:auto;
+}
+
+.digits-container
+{
+    font-family: 'Open Sans', sans serif;
+    font-size: 40px;
+    font-weight: bold;
+    width: 60px;
+    height: 100px;
+
+    border-radius: 6px;
+    position:absolute;
+    left:0; right:0;
+    top:0; bottom: 20;
+
+}
+
+.card
+{
+    position: relative;
+    height: 100%;
+    border-radius: 10px;
+    width: 100%;
+    transform-style: preserve-3d;
+
+
+}
+
+.front,
+.back
+{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+}
+
+.front
+{
+    color: #fff;
+    background: #2196f3;
+
+}
+
+.back
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+    color: #2196f3;
+    background: #fff;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/anime.js"></script>
+	<title>Binary skills game</title>
+</head>
+<body>
+	<div class="card-container">
+	  <div class="card">
+	    <div class="front">
+	      A
+	    </div>
+	    <div class="back">
+	      B
+	    </div>
+	  </div>
+	</div>
+	<div class="digits-container">
+		<div class="card"><div class="front">0</div></div>
+		<div class="card"><div class="front">0</div></div>
+	</div>
+	<script type="text/javascript">
+		var card = document.querySelector(".card");
+		var playing = false;
+
+		card.addEventListener('click',function() {
+		  if(playing)
+		    return;
+		  
+		  playing = true;
+		  anime({
+		    targets: card,
+		    scale: [{value: 1}, {value: 1.4}, {value: 1, delay: 250}],
+		    rotateY: {value: '+=180', delay: 200},
+		    easing: 'easeInOutSine',
+		    duration: 400,
+		    complete: function(anim){
+		       playing = false;
+		    }
+		  });
+		});
+	</script>
+</body>
+</html>
